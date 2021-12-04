@@ -16,9 +16,11 @@ build:
 requirements:
   host:
     - pip
+    - poetry
     - python
   run:
     - python
+    - poetry
 
 about:
   home: "https://github.com/abilian/ldif"
