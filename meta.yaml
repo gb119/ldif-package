@@ -1,0 +1,34 @@
+{% set name = "ldif" %}
+{% set version = "4.1.2" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: da6b834c28be5749cb55aef5c8f72a28204d19ecf08e068ee6790d9131fbe591
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+about:
+  home: "https://github.com/abilian/ldif"
+  license: BSD
+  license_family: BSD
+  license_file: 
+  summary: "generate and parse LDIF data (see RFC 2849)."
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - https://github.com/gb119
